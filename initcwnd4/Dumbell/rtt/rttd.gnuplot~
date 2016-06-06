@@ -1,0 +1,9 @@
+set terminal png
+set output "rttVsPD.png"
+set key top
+set xlabel "RTT (ms)"
+set ylabel "Packet Drop Rate (%)"
+set yrange [2:8]
+plot "rttnewreno" using 4:18 title  'Slowstart' with lp,\
+"rttnewrenonew" using 4:18  title 'CautiousSlowStart' with lp 
+ 
